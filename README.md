@@ -101,11 +101,11 @@ I asked five questions and checked each agent answer against a pandas calculatio
 
 | # | Question | First run | After fix |
 |---|---|---|---|
-| 1 | Which region has the highest total revenue_aed? | Right | [Right or Wrong] |
-| 2 | How many orders were placed in March 2025? | Right | [Right or Wrong] |
-| 3 | What is the average discount on Laptop orders? | Right | [Right or Wrong] |
-| 4 | What is the total revenue for Phones? | Wrong (returned 0 AED) | [Right or Wrong] |
-| 5 | Draw a bar chart of revenue_aed by product. | Right | [Right or Wrong] |
+| 1 | Which region has the highest total revenue_aed? | Right | Right |
+| 2 | How many orders were placed in March 2025? | Right | Right |
+| 3 | What is the average discount on Laptop orders? | Right | Right |
+| 4 | What is the total revenue for Phones? | Wrong (returned 0 AED) | Right |
+| 5 | Draw a bar chart of revenue_aed by product. | Right | Right |
 
 | Metric | Result |
 |---|---|
@@ -133,7 +133,7 @@ After the change, the agent returned [the correct total of X AED on the first tr
 - `run_pandas` uses `exec` to run code the model writes. Use this project only with your own data on your own computer.
 - The regression model is simple. A linear model cannot fully capture how quantity and discount multiply together, so its R2 score is moderate.
 - The test set has only five questions. A larger test set would give a more reliable accuracy figure.
-- The model runs without a dedicated GPU, so each question takes [XX to XX] seconds on my laptop.
+- The model runs without a dedicated GPU, so each question takes [50 to 70] seconds on my laptop.
 
 ## Next steps
 
